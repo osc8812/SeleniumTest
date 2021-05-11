@@ -32,7 +32,7 @@ import java.util.Scanner;
                     Actitime newActitme = new Actitime();
                     newActitme.surfActitime();
                     break;
-                case "w":
+                case "p":
                     AirlinersTest a = new AirlinersTest();
                     a.airlinersTestsearch();
                     break;
