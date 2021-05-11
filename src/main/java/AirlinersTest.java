@@ -16,16 +16,21 @@ public class AirlinersTest {
     driver.get("https://www.airliners.net");
     WebDriverWait w = new WebDriverWait(driver, 5);
     w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul")));
-    driver.findElement(By.cssSelector(".ljEJIv")).click();
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.cssSelector(".ljEJIv")).click();
     driver.findElement(By.cssSelector(".nav-link-news > a")).click();
     driver.findElement(By.cssSelector(".ps-v2-results-col:nth-child(8) .lazy-load")).click();
     driver.findElement(By.linkText("Large")).click();
         try {
-            TimeUnit.MINUTES.sleep(1);
+            TimeUnit.SECONDS.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         driver.close();
-    Main.meny();
+        Main.meny();
     }
 }
