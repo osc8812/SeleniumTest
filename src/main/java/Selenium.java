@@ -7,23 +7,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class Adlibris {
+public class Selenium {
 
-
-    public void adlibrisWebsite() {
+    public void selenium(String url) {
         System.setProperty("webdriver.chrome.driver", ".driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://Adlibris.Com/se/");
+        driver.get("https://www.google.com/");
         WebElement p = driver.findElement(By.name("q"));
-        p.sendKeys("praktisk mjukvarutestning");
+        p.sendKeys("Software Testing");
         WebDriverWait w = new WebDriverWait(driver, 5);
         w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul")));
         p.submit();
-        driver.findElement(By.cssSelector(".purchase__wrapper .btn--first-divider")).click();
-        driver.findElement(By.linkText("Till kassan")).click();
-        //driver.close();
+        driver.close();
         Main.meny();
     }
-
 }
