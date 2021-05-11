@@ -13,11 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  class Main {
 
     public static void main(String[]args) {
-        System.setProperty("webdriver.chrome.driver", ".driver/chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.actitime.com/");
-        driver.close();
+        meny();
     }
 
     public static void meny() {
